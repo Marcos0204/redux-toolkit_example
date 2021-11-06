@@ -1,12 +1,16 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import UserList from './components/UserList';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const App = () => {
+  
   return (
-    <div>
+    <Provider store={store}>
       <Navbar />
-      <h1>app</h1>
-    </div>
+      <UserList/>
+    </Provider>
   )
 }
 
